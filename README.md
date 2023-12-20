@@ -9,9 +9,8 @@ I'm a computer science student who is passionate about writing code, solving pro
 - 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
 - 📚 I’m currently learning  backend web development using PHP-MySql ,<br> Windos base application using ASP.NET. 
 - 👯 I’m looking for a FrontEnd Web development internship. 
-- 📫 How to reach me:
-<a href="https://www.linkedin.com/in/shailesh-makawana-75265125a">![Linkedin](https://img.shields.io/badge/--000000?style=for-the-badge&logo=linkedin)</a>
-
+- 📫 How to reach me:<br>
+<a href="https://www.linkedin.com/in/shailesh-makawana-75265125a">![Linkedin](https://img.shields.io/badge/--000000?style=for-the-badge&logo=linkedin&logoColor=0000ff)</a>&nbsp; &nbsp;<a href="https://instagram.com/shailesh.04m">![Instagram](https://img.shields.io/badge/--000000?style=for-the-badge&logo=instagram&logoColor=pink)</a>&nbsp;&nbsp;   <a href="https://facebook.com/shailesh.04m">![Facebook](https://img.shields.io/badge/--000000?style=for-the-badge&logo=facebook&logoColor=0000ff)</a>
 
 <hr>
 

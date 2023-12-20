@@ -1,13 +1,20 @@
-### Hi there  <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px"></h2>
+### Hi there  <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px">
  <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
-<img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="510"/>
+<img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="50%"/>
+<br>
+<hr>
 
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.
 
 - 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
 - 📚 I’m currently learning  backend web development using PHP-MySql ,<br> Windos base application using ASP.NET. 
 - 👯 I’m looking for a FrontEnd Web development internship. 
-- 📫 How to reach me: [Linkedin](https://www.linkedin.com/in/hazemessamsaleh) [Gmail](mailto:hazemkwita123@gmail.com)<br>
+- 📫 How to reach me:
+<a href="https://www.linkedin.com/in/shailesh-makawana-75265125a">![Linkedin](https://img.shields.io/badge/--000000?style=for-the-badge&logo=linkedin)</a>
+
+
+<hr>
+
 ### Language and Tool</br>
 
 ![C](https://img.shields.io/badge/-C-000000?style=for-the-badge&logo=C)
@@ -19,10 +26,14 @@ I'm a computer science student who is passionate about writing code, solving pro
 ![PHP](https://img.shields.io/badge/-php-000000?style=for-the-badge&logo=php&logoColor=007396)
 ![SQL](https://img.shields.io/badge/-SQL-000000?style=for-the-badge&logo=MySQL)
 ![Github](https://img.shields.io/badge/-github-000000?style=for-the-badge&logo=github&logoColor=fff)
-![Termux](http://img.shields.io/badge/-Termux-000000?style=for-the-badge&logo=powershell&logoColor=fff)
-<br>
+![Termux](http://img.shields.io/badge/-Termux-000000?style=for-the-badge&logo=powershell&logoColor=00ff00) 
+
+<hr>
+
 ### Conection With Me <br><br>
-<br><br>
+
+<hr>
+
 ### Status
 [![shailesh-04's github stats](https://github-readme-stats.vercel.app/api?username=shailesh-04&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)](https://github.com/shailesh-04/github-readme-stats)
 <br>

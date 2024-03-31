@@ -2,6 +2,7 @@
  <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
 <img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="50%"/>
 <br>
+<img src="https://github.com/yoshi389111/yoshi389111/blob/main/docs/hello.svg" />
 <hr>
 
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.

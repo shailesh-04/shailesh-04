@@ -2,6 +2,7 @@
  <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
 <br>
 <img src="https://github.com/yoshi389111/yoshi389111/blob/main/docs/hello.svg" />
+<img src="https://github.com/shailesh-04/shailesh-04/blob/main/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="300"/>
 <hr>
 
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.
@@ -15,17 +16,13 @@ I'm a computer science student who is passionate about writing code, solving pro
 <hr>
 
 ### Language and Tool</br>
+<div align="center">
+  <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="50" height="50" />
+  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon"width="50" height="50" />
+  <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="50" height="50" />
+ <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="50" height="50" />
 
-![C](https://img.shields.io/badge/-C-000000?style=for-the-badge&logo=C)
-![C++](https://img.shields.io/badge/-C++-000000?style=for-the-badge&logo=C%2B%2B&logoColor=00599C)
-![DFS](http://img.shields.io/badge/-DFS-000000?style=for-the-badge&logo=c&logoColor=white)
-![HTML5](https://img.shields.io/badge/-HTML5-000000?style=for-the-badge&logo=HTML5)
-![CSS3](https://img.shields.io/badge/-CSS3-000000?style=for-the-badge&logo=CSS3)
-![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=for-the-badge&logo=javascript)
-![PHP](https://img.shields.io/badge/-php-000000?style=for-the-badge&logo=php&logoColor=007396)
-![SQL](https://img.shields.io/badge/-SQL-000000?style=for-the-badge&logo=MySQL)
-![Github](https://img.shields.io/badge/-github-000000?style=for-the-badge&logo=github&logoColor=fff)
-![Termux](http://img.shields.io/badge/-Termux-000000?style=for-the-badge&logo=powershell&logoColor=00ff00) 
+</div>
 
 <hr>
 
@@ -45,7 +42,7 @@ I'm a computer science student who is passionate about writing code, solving pro
 <h2 align="center">Repositories</h2>
 
 <p width="100%" align="center">
-  <a align="left" href="https://github.com/shailesh-04/C-Langauge" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=C-Langauge&theme=gotham"></a>
+  <a align="left" href="https://github.com/shailesh-04/node" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=C-Langauge&theme=gotham"></a>
   <a align="right" href="https://github.com/shailesh-04/CPP" title="CPP"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=CPP&theme=gotham"></a>
 </p>
 <br><br>

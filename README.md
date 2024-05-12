@@ -1,6 +1,5 @@
 ### Hi there  <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px">
  <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
-<img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="50%"/>
 <br>
 <img src="https://github.com/yoshi389111/yoshi389111/blob/main/docs/hello.svg" />
 <hr>

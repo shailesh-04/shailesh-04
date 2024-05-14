@@ -1,8 +1,8 @@
 ### Hi there  <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px">
  <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
 <br>
-<img src="https://github.com/yoshi389111/yoshi389111/blob/main/docs/hello.svg" />
-<img src="https://github.com/shailesh-04/shailesh-04/blob/main/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="300"/>
+<img src="https://github.com/yoshi389111/yoshi389111/blob/main/docs/hello.svg" width="50%" />
+<img src="https://github.com/shailesh-04/shailesh-04/blob/main/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="40%"/>
 <hr>
 
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.

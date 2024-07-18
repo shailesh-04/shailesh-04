@@ -5,13 +5,24 @@
 <img src="https://github.com/shailesh-04/shailesh-04/blob/main/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="40%"/>
 <hr>
 
+### About Me
+
+<details>
+<summary style="font-size:">Click....</summary><br/>
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.
 
 - 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
 - 📚 I’m currently learning  backend web development using PHP-MySql ,<br> Windos base application using ASP.NET. 
-- 👯 I’m looking for a FrontEnd Web development internship. 
-- 📫 How to reach me:
-
+- 👯 I’m looking for a FrontEnd Web development internship.
+- 🔭 I’m currently working on Develop a Auto AI Softwer.
+- 🌱 I’m currently learning Laravel,Oracle,ASP.NET.
+- 👯 I’m looking to collaborate on full stack js deveopr job.
+- 🤔 I’m looking for help with create project.
+- 💬 Ask me about ....
+- 📫 How to reach me: ...
+- 😄 Pronouns: shailesh
+- ⚡ Fun fact: 
+</details>
 <hr>
 
 ### Language and Tool</br>
@@ -32,30 +43,4 @@ I'm a computer science student who is passionate about writing code, solving pro
 ![VisitorCount](https://profile-counter.glitch.me/{shialesh-04}/count.svg)
 
 <hr>
-
 <h2 align="center">Repositories</h2>
-
-<p width="100%" align="center">
-  <a align="left" href="https://github.com/shailesh-04/node" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=C-Langauge&theme=gotham"></a>
-  <a align="right" href="https://github.com/shailesh-04/CPP" title="CPP"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=CPP&theme=gotham"></a>
-</p>
-<br><br>
-<p width="100%" align="center">
-  <a align="left" href="https://github.com/shailesh-04/JavaScript" title="JavaScript"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=JavaScript&theme=gotham"></a>
-  <a align="right" href="https://github.com/shailesh-04/CSS" title="Casting-style-sheet"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=shailesh-04&repo=CSS&theme=gotham"></a>
-</p>
-<!--
-**shailesh-04/shailesh-04** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-⭐️ From [Neel](https://github.com/shailesh-04)

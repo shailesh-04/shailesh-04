@@ -10,7 +10,7 @@
 ### About Me
 
 <details>
-<summary style="font-size:">Click....</summary><br/>
+<summary><h3>Click For Show...</h3></summary><br/>
 I'm a computer science student who is passionate about writing code, solving problems, automating stuff, and building software,game.
 
 - 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.

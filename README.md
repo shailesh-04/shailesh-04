@@ -1,6 +1,20 @@
 # 💫 About Me:
 I'm a 💻computer science 👨‍💻student who is passionate about writing code 👨‍💻, solving problems 😜, automating stuff, and building software🈸,game🎮.
+- 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
+- 📚 I’m currently learning  RDBMS-ORACLE, ASP.NET, App Development. 
+- 👯 I’m looking for a FrontEnd Web development internship.
+- 🔭 I’m currently working on Develop a Full Stack E-Commers WebSite,Full Stack App(Android,Ios) Softwer.
+- 👯 I’m looking to collaborate on full stack js deveopr,Full Stack Web Developer job.
+- 🤔 I’m looking for help with create project.
+- 💬 Ask me about ....
+- 📫 How to reach me:<br/>
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/shailesh.04m) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/shailesh.04m) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/in/shailesh-makawana-75265125a) 
+- 😄 Pronouns: Shailesh
+- ⚡ Fun fact: 
 
+<br>
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+<br>
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/shailesh.04m) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/shailesh.04m) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/in/shailesh-makawana-75265125a) 

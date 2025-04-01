@@ -1,7 +1,7 @@
-# 💫 About Me:
+# 💫 About Me:<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Man Technologist Light Skin Tone" width="40" height="40" />
 I'm a 💻computer science 👨‍💻student who is passionate about writing code 👨‍💻, solving problems 😜, automating stuff, and building software🈸,game🎮.
-- 🔭 I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
-- 📚 I’m currently learning  RDBMS-ORACLE, ASP.NET, App Development. 
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telescope.png" alt="Telescope" width="25" height="25" /> I’m currently a BCA student at Maharaja Krishnakumarsihji bhavanagar univercity.
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Books" width="25" height="25" /> I’m currently learning  RDBMS-ORACLE, ASP.NET, App Development. 
 - 👯 I’m looking for a FrontEnd Web development internship.
 - 🔭 I’m currently working on Develop a Full Stack E-Commers WebSite,Full Stack App(Android,Ios) Softwer.
 - 👯 I’m looking to collaborate on full stack js deveopr,Full Stack Web Developer job.

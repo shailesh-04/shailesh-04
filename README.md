@@ -5,12 +5,12 @@ I'm a 💻computer science 👨‍💻student who is passionate about writing co
 - 👯 I’m looking for a FrontEnd Web development internship.
 - 🔭 I’m currently working on Develop a Full Stack E-Commers WebSite,Full Stack App(Android,Ios) Softwer.
 - 👯 I’m looking to collaborate on full stack js deveopr,Full Stack Web Developer job.
-- 🤔 I’m looking for help with create project.
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thinking%20Face.png" alt="Thinking Face" width="25" height="25" /> I’m looking for help with create project.
 - 💬 Ask me about ....
 - 📫 How to reach me:<br/>
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shailesamakavana@gmail.com)
 
-- 😄 Pronouns: Shailesh
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Face%20with%20Smiling%20Eyes.png" alt="Grinning Face with Smiling Eyes" width="25" height="25" /> Pronouns: Shailesh
 - ⚡ Fun fact: 
 
 <br>

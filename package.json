@@ -1,0 +1,28 @@
+{
+    "name": "shailesh-04",
+    "version": "1.0.0",
+    "description": "this is my portfolio site ",
+    "main": "index.ts",
+    "scripts": {
+        "build": "tsc",
+        "start": "npm run build && npx serve public",
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shailesh-04/shailesh-04.git"
+    },
+    "keywords": [
+        "shailesh-04"
+    ],
+    "author": "shaielsh makavana",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/shailesh-04/shailesh-04/issues"
+    },
+    "homepage": "https://github.com/shailesh-04/shailesh-04#readme",
+    "devDependencies": {
+        "serve": "^14.2.4",
+        "typescript": "^5.8.3"
+    }
+}

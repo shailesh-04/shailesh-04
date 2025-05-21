@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>About Temp Ptrogram</title>
+    <style rel="stylesheet" type="text/css" >
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html{
+        font: 10px;
+      }
+      .container{
+        background: #1f242b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .box{
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+        transform-style: preserve-3d;
+        animation: anim 20s linear infinite;
+        
+      } 
+      @keyframes anim{
+        0%{
+          transform: perspective(150rem) rotateY(0deg);
+        }
+        100%{
+          transform: perspective(150rem) rotateY(360deg);
+        }
+      }
+      .box div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 70%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(20rem);
+        -webkit-box-reflect: below 0px
+        linear-gradient(transparent,transparent,#0004);
+      }
+      .box div img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 3px solid #0ef;;
+        border-radius: 2rem;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div style="--i:1"><img src="About Me/Images/Gallery/3c50ca5744f64c26bd6c3048a598f4fc.jpg"></div>
+        <div style="--i:2"><img src="Gallery/8c8058ae3bd0472cafc3e0a3d5803cf6.jpg"></div>
+        <div style="--i:3"><img src="Gallery/da66bc870adb39d370a13c55ed4eeaa1.jpg"></div>
+        <div style="--i:4"><img src="Gallery/instagram__1657241672309.jpg"></div>
+        <div style="--i:5"><img src="Gallery/Jay shree krishna (1).jpg"></div>
+        <div style="--i:6"><img src="Gallery/Jay shree krishna.jpg"></div>
+        <div style="--i:7"><img src="Gallery/Radhey Radhey_-)_-_.jpeg"></div>
+        <div style="--i:8"><img src="Gallery/Reels(2).jpg"></div>
+        <div style="--i:9"><img src="Gallery/Screenshot_2023-04-18-16-30-21-062_com.miui.gallery.jpg"></div>
+      <!-- <div class="box"><img src="Gallery/Screenshot_2023-05-14-20-16-10-202_com.instagram.android.jpg"></div> -->
+      
+      </div>
+    </div>
+  </body>
+</html>
+</html>
+</html>
+</html>
+</html>
+</html>

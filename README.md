@@ -15,7 +15,11 @@ I'm a 💻computer science 👨‍💻student who is passionate about writing co
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shailesh-04m/)
 
 - <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Face%20with%20Smiling%20Eyes.png" alt="Grinning Face with Smiling Eyes" width="25" height="25" /> Pronouns: Shailesh
-- ⚡ Fun fact:
+  
+- ⚡ Sites:
+  <a href="https://shailesh-04.github.io/shailesh-04/" target="_blank">shailesh</a>
+  |
+  <a href="https://shailesh-04.github.io/ReactJs/" target="_blank">React Doc</a>
   
 # 💻 Tech Stack:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)

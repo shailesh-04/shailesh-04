@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shailesh Makavana | Shopify & Node.js Developer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Shopify & Node.js Developer with 2+ years experience. Expert in Liquid, Shopify APIs, webhooks, automation, and performance optimization." />
+  <meta name="keywords" content="Shopify Developer, Node.js, Liquid, Shopify API, Webhooks, Automation" />
+  <meta name="author" content="Shailesh Makavana" />
+
+  <!-- Theme Variables -->
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --card: #273449;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --primary: #3b82f6;
+      --border: #334155;
+    }
+
+    .light {
+      --bg: #f8fafc;
+      --surface: #e2e8f0;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #2563eb;
+      --border: #cbd5e1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .theme-btn {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-box {
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      border-radius: 16px;
+      height: 260px;
+      display: grid;
+      place-items: center;
+      font-size: 6rem;
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 22px;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      margin-left: 10px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-bar {
+      background: var(--surface);
+      height: 8px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .skill-fill {
+      background: var(--primary);
+      height: 100%;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: var(--surface);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin: 5px 5px 0 0;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">👨‍💻 Shailesh Makavana</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme-btn" id="toggle">🌙</div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <p class="muted">Shopify Developer | Node.js Expert</p>
+      <h1>Building Scalable Shopify Systems</h1>
+      <p>I specialize in Shopify themes, automation, APIs, and performance-focused e-commerce solutions.</p>
+      <a href="#contact" class="btn">Hire Me</a>
+      <a href="#projects" class="btn outline">View Work</a>
+    </div>
+    <div class="hero-box">{ }</div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div>
+        <p>Shopify & Node.js developer with 2+ years of experience creating custom themes, automation tools, and backend integrations.</p>
+        <div class="stats">
+          <div class="stat"><span>2+</span>Years</div>
+          <div class="stat"><span>20+</span>Projects</div>
+          <div class="stat"><span>100%</span>Satisfaction</div>
+        </div>
+      </div>
+      <div class="card">
+        <p><strong>📍 Location:</strong> Surat, India</p>
+        <p><strong>📧 Email:</strong> shailesh.04m@gmail.com</p>
+        <p><strong>📞 Phone:</strong> +91 9054277612</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Shopify & Liquid</h3>
+        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="card">
+        <h3>Node.js & APIs</h3>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="card">
+        <h3>Automation & Webhooks</h3>
+        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Shopify Webhook Dashboard</h3>
+        <p>Centralized webhook control & automation.</p>
+        <div class="tags"><span>Node.js</span><span>Shopify API</span></div>
+      </div>
+      <div class="card">
+        <h3>SEO Automation Tool</h3>
+        <p>AI-powered SEO and tagging system.</p>
+        <div class="tags"><span>GraphQL</span><span>AI</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <p>Available for freelance & remote work.</p>
+      </div>
+      <form>
+        <input placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Shailesh Makavana</p>
+</footer>
+
+<script>
+  const btn = document.getElementById("toggle");
+  btn.onclick = () => {
+    document.body.classList.toggle("light");
+    btn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+  };
+</script>
+</body>
+</html>

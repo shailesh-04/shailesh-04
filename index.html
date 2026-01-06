@@ -1,195 +1,777 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>my web site </title>
-  <!-- This Css Use Only Small Animation -->
-  <style rel="stylesheet" type="text/css">
-
-  </style>
-  <!-- ====aos -->
-  <!-- here Type CSS File -->
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <!-- Icon Css Link -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Professional Portfolio - Developer CV</title>
+    
+    <!-- Tailwind CSS (CDN for development only) -->
+    <script>
+        // Suppress Tailwind CDN warning
+        if (typeof console !== 'undefined' && console.warn) {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
+                    return; // Suppress Tailwind CDN warning
+                }
+                originalWarn.apply(console, args);
+            };
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-
-  <header class="header">
-    <a class="logo" href="#">Rcode</a>
-    <!-- menu Icon Link -->
-    <p id="demo"></p>
-    <i class='bx bx-menu' id="manu-icon" onclick="NavOpen()"></i>
-    <!-- Nav bar  -->
-    <nav class="nav-bar">
-      <a href="#Home" class="active">Home</a>
-      <a href="#About">About Me</a>
-      <a href="#Project">Project</a>
-      <a href="#service">service</a>
-      <a href="#Contact">Contact</a>
-    </nav>
-  </header>
-  <div id="cursor"></div>
-  <!-- <div id="cursor-blur"></div> -->
-
-  <!-- Home Selection Design -->
-  <section class="home" id="Home">
-    <div class="home-content">
-      <h3>Hallo, It's Me</h3>
-      <h1>Shailesh Makavana</h1>
-      <h3>And I'm a <span class="AnimName">Web Designer</span></h3>
-      <ul>
-        <li>Hello! My name is Shailesh Makavana.</li>
-        <li>I am currently pursuing a Bachelor of Computer Applications (BCA).</li>
-        <li>I study at S.M.T.K.B. Parekh BCA College, Mahuva, affiliated with Maharaja Krushnakumarsinhji Bhavnagar
-          University.</li>
-      </ul>
-
-
-
-      <!-- Social social-medea Link Icon  -->
-
-      <div class="social-media">
-        <a href="https://instagram.com/shailesh.04m"><i class='bx bxl-instagram'></i></a>
-        <a href="https://www.facebook.com/shailesh.04m"><i class='bx bxl-facebook-circle'></i></a>
-        <a href="https://www.linkedin.com/in/shailesh-makawana-75265125a"><i class='bx bxl-linkedin-square'></i></a>
-        <a href="#https://github.com/shailesh-04"><i class='bx bxl-github'></i></a>
-        <a href="#"><i class='bx bxl-youtube'></i></a>
-      </div>
-    </div>
-    <!-- background  Image  -->
-    <div class="img-container">
-      <div class="img-box"><img src="Gallery/3c50ca5744f64c26bd6c3048a598f4fc.jpg"></div>
-      <div class="img-box"><img src="Gallery/8c8058ae3bd0472cafc3e0a3d5803cf6.jpg"></div>
-      <div class="img-box"><img src="Gallery/da66bc870adb39d370a13c55ed4eeaa1.jpg"></div>
-      <div class="img-box"><img src="Gallery/instagram__1657241672309.jpg"></div>
-      <div class="img-box"><img src="Gallery/Jay shree krishna (1).jpg"></div>
-      <div class="img-box"><img src="Gallery/Jay shree krishna.jpg"></div>
-      <div class="img-box"><img src="Gallery/Radhey Radhey_-)_-_.jpeg"></div>
-      <div class="img-box"><img src="Gallery/Reels(2).jpg"></div>
-      <div class="img-box"><img src="Gallery/Screenshot_2023-04-18-16-30-21-062_com.miui.gallery.jpg"></div>
-    </div>
-
-  </section>
-
-
-  <!-- About Section  -->
-  <section class="about" id="About">
-    <div class="about-img">
-      <img src="Images/krishna.png">
-    </div>
-    <div class="about-content">
-      <h2 class="heading">About Of <span>Krishna</span></h2>
-      <h3>Krishna Is God</h3>
-      <p class="p1">Shree Krishna, also known as Lord Krishna, is a highly revered figure in Hinduism. He is considered
-        the eighth avatar or incarnation of Lord Vishnu, who is one of the principal deities in the Hindu pantheon.</p>
-      <p> Krishna is believed to have been born in ancient India around 5,000 years ago in Mathura, a cit located in
-        present-day Uttar Pradesh. The storyf his birth is narrated in the Hindu scriptes, particularly in the Bhagavata
-        Purana d the Mahabharata. He was born to Devaki andasudeva but was raised by Yashoda and Nanda in e village of
-        Vrindavan.</p>
-      <p> Krishna is known for his divine playfulness as a child, his charming personality, and his profound wisdom as a
-        philosopher and teacher. He performed many miraculous feats, such as lifting the Govardhan Hill on his little
-        finger, defeating powerful demons, and engaging in divine love play (lila) with his devotees, particularly with
-        the gopis (cowherd girls) of Vrindavan.</p>
-      <p> One of the most significant events associated with Krishna is the Bhagavad Gita, a sacred text within the
-        Indian epic Mahabharata. In the Bhagavad Gita, Krishna imparts spiritual wisdom and guidance to the warrior
-        prince Arjuna, who is faced with a moral dilemma on the battlefield of Kurukshetra. The teachings of Krishna in
-        the Bhagavad Gita revolve around duty, righteousness, devotion, and the path to attaining liberation or moksha.
-      </p>
-      <p> Krishna's life and teachings have had a profound influence on Hindu philosophy, spirituality, art, and
-        culture. He is worshipped by millions of devotees around the world, and his birthday, known as Krishna
-        Janmashtami, is celebrated with great enthusiasm and devotion in various parts of India. The stories and leelas
-        (divine plays) of Krishna continue to inspire people to lead virtuous lives and seek spiritual enlightenment.
-      </p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </section>
-
-  <!-------------- my Project ------------>
-
-  <section class="project" id="Project">
-    <h2 class="heading"> Letest <span>Project #</span></h2>
-
-    <div class="project-container">
-
-      <div class="project-box">
-        <i class='bx bxl-c-plus-plus'></i>
-        <h2>C & C++</h2>
-        <p>Web design refers to the design of websites that are displayed on the internet.</p>
-        <a href="#">Lear More</a>
-      </div>
-
-      <div class="project-box">
-        <i class='bx bx-code-alt'></i>
-        <h2>Web Design</h2>
-        <p>Web design refers to the design of websites that are displayed on the internet.</p>
-        <a href="#">Lear More</a>
-      </div>
-
-      <div class="project-box">
-        <i class='bx bxl-python'></i>
-        <h2>Python</h2>
-        <p>Web design refers to the design of websites that are displayed on the internet.</p>
-        <a href="#">Lear More</a>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!----------- my Work And project ------------->
-  <section class="service" id="service">
-    <h2 class="heading"> Service Is<span> Not Avelable</span>#</h2>
-  </section>
-
-  <!-- Comtact Me Semd Massege -->
-  <section class="contact" id="Contact">
-    <h2 class="heading">Contact <span>Me!</span></h2>
-    <form action="#">
-      <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" name="email" id="email" placeholder="Email Address">
-      </div>
-      <div class="input-box">
-        <input type="Number" placeholder="Mobail Number">
-        <input type="text" placeholder="Email Subjact">
-      </div>
-      <textarea cols="30" rows="7" placeholder="Type Your Massege"></textarea>
-      <input type="submit" value="Send Massege" class="btn" onclick="Massage()">
-    </form>
-  </section>
-  <!-- Footer  -->
-  <section>
-    <footer class="footer">
-      <div class="footer-flex">
-        <div class="footer-text">
-          <p>Copyright &copy; 2023 By Codehal | All Right Reserved</p>
+<body class="body-main" data-theme="dark" data-lang="en" data-dir="ltr">
+    
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loader">
+        <div class="loader-content">
+            <div class="loader-code-text">
+                <div class="code-line" data-line="1">const portfolio = {</div>
+                <div class="code-line" data-line="2">  loading: true,</div>
+                <div class="code-line" data-line="3">  status: 'initializing...'</div>
+                <div class="code-line" data-line="4">};</div>
+            </div>
+            <div class="loader-spinner-wrapper">
+                <div class="loader-spinner"></div>
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loaderPercent">0%</div>
         </div>
-        <div class="social-media">
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Dev</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text" data-text-en="Home" data-text-ar="الرئيسية">Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text" data-text-en="About" data-text-ar="عني">About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span class="nav-text" data-text-en="Skills" data-text-ar="المهارات">Skills</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-text" data-text-en="Experience" data-text-ar="الخبرة">Experience</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-rocket"></i>
+                    <span class="nav-text" data-text-en="Projects" data-text-ar="المشاريع">Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text" data-text-en="Contact" data-text-ar="التواصل">Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle" title="Toggle Language">
+                    <i class="fas fa-language"></i>
+                    <span class="lang-text">AR</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="code-grid-bg"></div>
+                <div class="floating-particles" id="particles"></div>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-text" data-text-en="Hello, I'm" data-text-ar="مرحباً، أنا">Hello, I'm</span>
+                        <span class="greeting-cursor">|</span>
+                    </div>
+                    
+                    <h1 class="hero-name" id="heroName">
+                        <span class="name-prefix">const</span>
+                        <span class="name-operator">=</span>
+                        <span class="name-value">Developer</span>
+                        <span class="name-suffix">;</span>
+                    </h1>
+                    
+                    <div class="hero-title">
+                        <span class="title-prefix">//</span>
+                        <span class="title-text" data-text-en="Full Stack Developer & UI/UX Designer" data-text-ar="مطور Full Stack & مصمم UI/UX">Full Stack Developer & UI/UX Designer</span>
+                    </div>
+                    
+                    <p class="hero-description" data-text-en="Passionate developer creating exceptional digital experiences with modern technologies." data-text-ar="مطور شغوف بإنشاء تجارب رقمية استثنائية باستخدام التقنيات الحديثة.">
+                        Passionate developer creating exceptional digital experiences with modern technologies.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-text-en="Get In Touch" data-text-ar="تواصل معي">Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span data-text-en="View Projects" data-text-ar="عرض المشاريع">View Projects</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="#" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <div class="profile-image-glow"></div>
+                        <div class="profile-image-frame">
+                            <div class="profile-image" id="profileImage">
+                                <div class="profile-placeholder">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="fab fa-react"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">React</span>
+                                <span class="badge-libs">Redux, Router, Hooks</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fab fa-node-js"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Node.js</span>
+                                <span class="badge-libs">Express, Socket.io, MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fab fa-js"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">JavaScript</span>
+                                <span class="badge-libs">ES6+, TypeScript, jQuery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text" data-text-en="Scroll Down" data-text-ar="انتقل للأسفل">Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="About Me" data-text-ar="عني">About Me</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text-wrapper">
+                        <div class="about-intro">
+                            <p class="about-text" data-text-en="I'm a passionate Full Stack Developer with over 5 years of experience in building modern web applications and mobile solutions. I specialize in JavaScript technologies, React, Node.js, and creating beautiful user interfaces." data-text-ar="أنا مطور Full Stack شغوف مع أكثر من 5 سنوات من الخبرة في بناء تطبيقات الويب الحديثة والحلول الجوالة. أتخصص في تقنيات JavaScript، React، Node.js، وإنشاء واجهات مستخدم جميلة.">
+                                I'm a passionate Full Stack Developer with over 5 years of experience in building modern web applications and mobile solutions. I specialize in JavaScript technologies, React, Node.js, and creating beautiful user interfaces.
+                            </p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="50">0</div>
+                                <div class="stat-label" data-text-en="Projects" data-text-ar="مشروع">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="5">0</div>
+                                <div class="stat-label" data-text-en="Years Experience" data-text-ar="سنوات خبرة">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="30">0</div>
+                                <div class="stat-label" data-text-en="Happy Clients" data-text-ar="عميل سعيد">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image-wrapper">
+                        <div class="about-image-container">
+                            <div class="code-block">
+                                <div class="code-line">
+                                    <span class="code-keyword">const</span>
+                                    <span class="code-variable">developer</span>
+                                    <span class="code-operator">=</span>
+                                    <span class="code-brace">{</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">name</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Developer'</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">skills</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-bracket">[</span>
+                                    <span class="code-string">'React'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Node.js'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'TypeScript'</span>
+                                    <span class="code-bracket">]</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">passion</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Coding'</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-brace">}</span>
+                                    <span class="code-semicolon">;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Skills" data-text-ar="المهارات">Skills</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Frontend" data-text-ar="الواجهة الأمامية">Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="React" data-percent="95">
+                                <div class="skill-header">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Vue.js" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Vue.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="TypeScript" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Next.js" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">Next.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Backend" data-text-ar="الخلفية">Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Node.js" data-percent="92">
+                                <div class="skill-header">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Express" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">Express</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="MongoDB" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="PostgreSQL" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">PostgreSQL</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Tools & Others" data-text-ar="الأدوات وغيرها">Tools & Others</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Git" data-percent="95">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Docker" data-percent="75">
+                                <div class="skill-header">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="AWS" data-percent="70">
+                                <div class="skill-header">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Figma" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Experience" data-text-ar="الخبرة">Experience</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2022 - Present</div>
+                                <div class="timeline-badge">Current</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Senior Full Stack Developer" data-text-ar="مطور Full Stack أول">Senior Full Stack Developer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Tech Company Inc.
+                            </div>
+                            <p class="timeline-description" data-text-en="Leading a team of developers in building complex web applications using React and Node.js. Developing advanced user interfaces and optimizing performance. Implementing microservices architecture and CI/CD pipelines." data-text-ar="قيادة فريق من المطورين في بناء تطبيقات ويب معقدة باستخدام React و Node.js. تطوير واجهات مستخدم متقدمة وتحسين الأداء. تنفيذ معمارية microservices وخطوط CI/CD.">
+                                Leading a team of developers in building complex web applications using React and Node.js. Developing advanced user interfaces and optimizing performance. Implementing microservices architecture and CI/CD pipelines.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Led team of 5 developers" data-text-ar="قيادة فريق من 5 مطورين">Led team of 5 developers</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Improved performance by 40%" data-text-ar="تحسين الأداء بنسبة 40%">Improved performance by 40%</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Deployed 20+ production apps" data-text-ar="نشر أكثر من 20 تطبيق إنتاجي">Deployed 20+ production apps</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2020 - 2022</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Frontend Developer" data-text-ar="مطور واجهة أمامية">Frontend Developer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Digital Solutions
+                            </div>
+                            <p class="timeline-description" data-text-en="Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs." data-text-ar="تطوير واجهات مستخدم تفاعلية باستخدام React و Vue.js. العمل على تحسين تجربة المستخدم وتحسين الأداء. التعاون مع المصممين لتنفيذ تصاميم دقيقة.">
+                                Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Built 15+ responsive websites" data-text-ar="بناء أكثر من 15 موقع متجاوب">Built 15+ responsive websites</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Reduced load time by 50%" data-text-ar="تقليل وقت التحميل بنسبة 50%">Reduced load time by 50%</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SASS</span>
+                                <span class="tag">Webpack</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2018 - 2020</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Junior Developer" data-text-ar="مطور مبتدئ">Junior Developer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Creative Studio
+                            </div>
+                            <p class="timeline-description" data-text-en="Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies." data-text-ar="تطوير مواقع ويب باستخدام HTML و CSS و JavaScript. تعلم أفضل الممارسات في تطوير الويب. العمل على مشاريع عملاء متنوعة واكتساب خبرة في تقنيات الويب الحديثة.">
+                                Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Completed 30+ projects" data-text-ar="إكمال أكثر من 30 مشروع">Completed 30+ projects</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Learned modern frameworks" data-text-ar="تعلم إطارات العمل الحديثة">Learned modern frameworks</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">jQuery</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Projects" data-text-ar="المشاريع">Projects</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="E-Commerce Platform" data-text-ar="منصة التجارة الإلكترونية">E-Commerce Platform</h3>
+                            <p class="project-description" data-text-en="A complete e-commerce platform with payment integration and advanced inventory management." data-text-ar="منصة تجارة إلكترونية كاملة مع تكامل الدفع وإدارة المخزون المتقدمة.">
+                                A complete e-commerce platform with payment integration and advanced inventory management.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="Task Management App" data-text-ar="تطبيق إدارة المهام">Task Management App</h3>
+                            <p class="project-description" data-text-en="A web application for task management with real-time synchronization and modern design." data-text-ar="تطبيق ويب لإدارة المهام مع مزامنة فورية وتصميم عصري.">
+                                A web application for task management with real-time synchronization and modern design.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="Blog Platform" data-text-ar="منصة المدونة">Blog Platform</h3>
+                            <p class="project-description" data-text-en="A modern blog platform with CMS features and beautiful UI design." data-text-ar="منصة مدونة حديثة مع ميزات CMS وتصميم واجهة مستخدم جميل.">
+                                A modern blog platform with CMS features and beautiful UI design.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Prisma</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Contact" data-text-ar="التواصل">Contact</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Email" data-text-ar="البريد الإلكتروني">Email</h4>
+                                <a href="mailto:developer@example.com" class="contact-value">developer@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Phone" data-text-ar="الهاتف">Phone</h4>
+                                <a href="tel:+966501234567" class="contact-value">+966 50 123 4567</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Location" data-text-ar="الموقع">Location</h4>
+                                <span class="contact-value" data-text-en="Riyadh, Saudi Arabia" data-text-ar="الرياض، المملكة العربية السعودية">Riyadh, Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" data-placeholder-en="Name" data-placeholder-ar="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email" data-placeholder-en="Email" data-placeholder-ar="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" data-placeholder-en="Subject" data-placeholder-ar="الموضوع" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input form-textarea" rows="5" placeholder="Message" data-placeholder-en="Message" data-placeholder-ar="الرسالة" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span data-text-en="Send Message" data-text-ar="إرسال الرسالة">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text-wrapper">
+                    <p class="footer-text">
+                        <span class="footer-copyright">© 2025 Developer Portfolio</span>
+                        <span class="footer-divider">•</span>
+                        <span class="footer-built">Built with passion and code</span>
+                    </p>
+                    <p class="footer-author">
+                        <span class="footer-by-text" data-text-en="by" data-text-ar="بواسطة">by</span>
+                        <a href="https://www.linkedin.com/in/mohammad-abu-sakour-kn" target="_blank" rel="noopener noreferrer" class="footer-author-link">
+                            <i class="fas fa-code"></i>
+                            <span>Kan3an</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/mohammad-abu-sakour-kn" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-iconTop">
-          <a href="#Home"><i class='bx bxs-home-alt-2'></i></a>
-        </div>
-      </div>
-      <div>
-        <h2>Mobail : <span>+91 90542776**</span></h2>
-        <h2>Email : <span>Shailes**@gmail.com</span></h2>
-      </div>
     </footer>
-    </swiper-slide>
-    <!--------- Costom Java script File --------->
-    <script type="text/javascript" src="./script.js"></script>
-    <!---------------------aos----------------->
-</body>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Motion One loaded dynamically -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
+

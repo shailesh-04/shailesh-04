@@ -1,1048 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shailesh Makavana | Shopify & Node.js Developer - 2+ Years Experience</title>
-    <meta name="description" content="Professional Shopify & Node.js Developer with 2+ years experience. Expert in Liquid, theme development, Shopify apps, automation tools, and webhook integrations.">
-    <meta name="keywords" content="Shopify Developer, Node.js Developer, Liquid, Webhooks, GraphQL, Theme Development, Automation, JavaScript">
-    <meta name="author" content="Shailesh Makavana">
-    
-    <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Shailesh Makavana | Shopify & Node.js Developer">
-    <meta property="og:description" content="2+ years experience in Shopify development, Node.js automation, and webhook integrations.">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
-    
-    <style>
-        /* CSS Variables for Theme Switching */
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #8b5cf6;
-            --border-color: #475569;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            --transition: all 0.3s ease;
-        }
-        
-        .light-theme {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #e2e8f0;
-            --bg-card: #ffffff;
-            --text-primary: #1e293b;
-            --text-secondary: #475569;
-            --accent-primary: #2563eb;
-            --accent-secondary: #7c3aed;
-            --border-color: #cbd5e1;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            transition: var(--transition);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 2px;
-        }
-        
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-        
-        a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        a:hover {
-            color: var(--accent-secondary);
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-        
-        /* Header & Navigation */
-        header {
-            padding: 2rem 0;
-            position: sticky;
-            top: 0;
-            background-color: var(--bg-primary);
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        
-        .logo-icon {
-            font-size: 2rem;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            font-weight: 500;
-            position: relative;
-        }
-        
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        
-        .theme-toggle {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .theme-toggle:hover {
-            transform: rotate(30deg);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--accent-primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--accent-primary);
-            color: var(--accent-primary);
-        }
-        
-        .hero-image {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 20px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        
-        .hero-image:before {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            top: -50px;
-            right: -50px;
-        }
-        
-        .hero-image:after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            bottom: -30px;
-            left: -30px;
-        }
-        
-        .code-icon {
-            font-size: 10rem;
-            color: white;
-            z-index: 2;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            display: inline-block;
-        }
-        
-        /* Cards */
-        .card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .stat {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--bg-secondary);
-            border-radius: 10px;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .experience-timeline:before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 80px;
-            margin-bottom: 3rem;
-        }
-        
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .timeline-date {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 60px;
-            height: 60px;
-            background: var(--bg-card);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: var(--accent-primary);
-            border: 2px solid var(--accent-primary);
-        }
-        
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-category {
-            margin-bottom: 2rem;
-        }
-        
-        .skill-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-bar {
-            height: 10px;
-            background: var(--bg-secondary);
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 5px;
-        }
-        
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .tech-tag {
-            background: var(--bg-secondary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--bg-secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-family: inherit;
-        }
-        
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--bg-secondary);
-            padding: 3rem 0;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .social-link {
-            width: 44px;
-            height: 44px;
-            background: var(--bg-card);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .social-link:hover {
-            background: var(--accent-primary);
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero, .about-content, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-image {
-                height: 300px;
-            }
-            
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-            }
-            
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my web site </title>
+  <!-- This Css Use Only Small Animation -->
+  <style rel="stylesheet" type="text/css">
+
+  </style>
+  <!-- ====aos -->
+  <!-- here Type CSS File -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- Icon Css Link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
-<body class="dark-theme">
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <span class="logo-icon">👨‍💻</span>
-                    <span>Shailesh Makavana</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" id="themeToggle">
-                    <span id="themeIcon">🌙</span>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <p class="hero-subtitle">Shopify Developer | Node.js Expert</p>
-                <h1>Shailesh Makavana</h1>
-                <p class="hero-description">
-                    I'm a passionate Shopify & Node.js developer with 2+ years of experience building 
-                    high-performance e-commerce solutions, custom themes, and automation tools for 
-                    Shopify stores worldwide.
-                </p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn">Get In Touch</a>
-                    <a href="#projects" class="btn btn-outline">View My Work</a>
-                </div>
-            </div>
-        </div>
-            <div class="hero-image">
-                <div class="code-icon">{ }</div>
-            </div>
-    </section>
+<body>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div>
-                    <h3>Professional Profile</h3>
-                    <p>
-                        I am a dedicated Shopify Developer with 2+ years of hands-on experience, 
-                        specializing in Liquid theme development, Shopify apps, and custom JavaScript 
-                        solutions. I transform Figma designs into fully functional, high-performance 
-                        Shopify stores.
-                    </p>
-                    <p>
-                        As a Node.js expert, I build powerful automation tools, webhook integrations, 
-                        and GraphQL APIs for Shopify stores. My solutions help merchants automate 
-                        store management, improve SEO, and streamline operations.
-                    </p>
-                    <p>
-                        I'm passionate about creating clean, efficient code and solving complex 
-                        e-commerce challenges with innovative technical solutions.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-number">2+</div>
-                            <div>Years Experience</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">20+</div>
-                            <div>Projects Completed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div>Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3>Personal Details</h3>
-                    <div class="card">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Mota Varachha, Surat, Gujarat, India</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>shailesh.04m@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 9054277612</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">💼</div>
-                            <div>
-                                <h4>Experience</h4>
-                                <p>Shopify & Node.js Developer (2+ years)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <header class="header">
+    <a class="logo" href="#">Rcode</a>
+    <!-- menu Icon Link -->
+    <p id="demo"></p>
+    <i class='bx bx-menu' id="manu-icon" onclick="NavOpen()"></i>
+    <!-- Nav bar  -->
+    <nav class="nav-bar">
+      <a href="#Home" class="active">Home</a>
+      <a href="#About">About Me</a>
+      <a href="#Project">Project</a>
+      <a href="#service">service</a>
+      <a href="#Contact">Contact</a>
+    </nav>
+  </header>
+  <div id="cursor"></div>
+  <!-- <div id="cursor-blur"></div> -->
 
-    <!-- Experience Section -->
-    <section id="experience" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Work Experience</h2>
-            </div>
-            
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023<br>Present</div>
-                    <div class="card">
-                        <h3>Shopify & Node.js Developer</h3>
-                        <p class="muted">Biters Code</p>
-                        <p>
-                            Leading Shopify theme development and Node.js automation projects for 
-                            international clients across various industries.
-                        </p>
-                        
-                        <h4>Shopify Development:</h4>
-                        <ul>
-                            <li>Converted 10+ Figma designs into fully functional Shopify themes</li>
-                            <li>Optimized store performance and SEO for multiple e-commerce businesses</li>
-                            <li>Built custom features: collection filters, AJAX search, cart drawers</li>
-                            <li>Worked on stores: jonathany, eyely, happimess, thelickerstore, cctvtrade, magnetix-ai, vapeclub(heb), asiswines(heb)</li>
-                        </ul>
-                        
-                        <h4>Node.js Automation:</h4>
-                        <ul>
-                            <li>Developed custom webhooks for Shopify collection management</li>
-                            <li>Created dashboard for centralized webhook management</li>
-                            <li>Built API tools to detect store issues (missing images, SEO, tags)</li>
-                            <li>Implemented AI-powered SEO updates and automatic tag generation</li>
-                            <li>One-click automation for data cleaning and store management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Home Selection Design -->
+  <section class="home" id="Home">
+    <div class="home-content">
+      <h3>Hallo, It's Me</h3>
+      <h1>Shailesh Makavana</h1>
+      <h3>And I'm a <span class="AnimName">Web Designer</span></h3>
+      <ul>
+        <li>Hello! My name is Shailesh Makavana.</li>
+        <li>I am currently pursuing a Bachelor of Computer Applications (BCA).</li>
+        <li>I study at S.M.T.K.B. Parekh BCA College, Mahuva, affiliated with Maharaja Krushnakumarsinhji Bhavnagar
+          University.</li>
+      </ul>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Technical Skills</h2>
-            </div>
-            
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Shopify Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Liquid Templating</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Theme Development</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Shopify Apps</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Store Optimization</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%;"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Backend & Automation</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Node.js</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Shopify API/Webhooks</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>GraphQL</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Automation Tools</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Frontend & Tools</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>JavaScript</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>HTML/CSS</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Git/GitHub</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Figma to Shopify</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Projects</h2>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="card">
-                    <h3>Shopify Webhook Dashboard</h3>
-                    <p>A centralized dashboard for managing all Shopify webhooks with real-time monitoring, one-click actions, and automated issue detection.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Shopify API</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">MongoDB</span>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h3>SEO Automation Tool</h3>
-                    <p>AI-powered tool that automatically analyzes and optimizes SEO for Shopify products and collections, generating tags and metadata.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">AI/ML</span>
-                        <span class="tech-tag">Shopify GraphQL</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h3>Multi-Store Theme</h3>
-                    <p>Custom Shopify theme used across 8+ stores with dynamic components, advanced filtering, and mobile-first responsive design.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Liquid</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">SCSS</span>
-                        <span class="tech-tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's Work Together</h3>
-                    <p>
-                        I'm currently available for freelance Shopify and Node.js projects. 
-                        Whether you need a custom theme, automation tool, or full-store development, 
-                        I'd love to hear about your project.
-                    </p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>shailesh.04m@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Phone/WhatsApp</h4>
-                            <p>+91 9054277612</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Surat, Gujarat, India</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Social social-medea Link Icon  -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">👨‍💻</span>
-                <span>Shailesh Makavana</span>
-            </div>
-            <p>Shopify & Node.js Developer | 2+ Years Experience</p>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/shailesh-04m" class="social-link" target="_blank">in</a>
-                <a href="https://github.com/shailesh-04" class="social-link" target="_blank">gh</a>
-                <a href="mailto:shailesh.04m@gmail.com" class="social-link">✉️</a>
-                <a href="tel:+919054277612" class="social-link">📞</a>
-            </div>
-            
-            <p>© 2025 Shailesh Makavana. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://instagram.com/shailesh.04m"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.facebook.com/shailesh.04m"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.linkedin.com/in/shailesh-makawana-75265125a"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="#https://github.com/shailesh-04"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+    <!-- background  Image  -->
+    <div class="img-container">
+      <div class="img-box"><img src="Gallery/3c50ca5744f64c26bd6c3048a598f4fc.jpg"></div>
+      <div class="img-box"><img src="Gallery/8c8058ae3bd0472cafc3e0a3d5803cf6.jpg"></div>
+      <div class="img-box"><img src="Gallery/da66bc870adb39d370a13c55ed4eeaa1.jpg"></div>
+      <div class="img-box"><img src="Gallery/instagram__1657241672309.jpg"></div>
+      <div class="img-box"><img src="Gallery/Jay shree krishna (1).jpg"></div>
+      <div class="img-box"><img src="Gallery/Jay shree krishna.jpg"></div>
+      <div class="img-box"><img src="Gallery/Radhey Radhey_-)_-_.jpeg"></div>
+      <div class="img-box"><img src="Gallery/Reels(2).jpg"></div>
+      <div class="img-box"><img src="Gallery/Screenshot_2023-04-18-16-30-21-062_com.miui.gallery.jpg"></div>
+    </div>
+
+  </section>
+
+
+  <!-- About Section  -->
+  <section class="about" id="About">
+    <div class="about-img">
+      <img src="Images/krishna.png">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About Of <span>Krishna</span></h2>
+      <h3>Krishna Is God</h3>
+      <p class="p1">Shree Krishna, also known as Lord Krishna, is a highly revered figure in Hinduism. He is considered
+        the eighth avatar or incarnation of Lord Vishnu, who is one of the principal deities in the Hindu pantheon.</p>
+      <p> Krishna is believed to have been born in ancient India around 5,000 years ago in Mathura, a cit located in
+        present-day Uttar Pradesh. The storyf his birth is narrated in the Hindu scriptes, particularly in the Bhagavata
+        Purana d the Mahabharata. He was born to Devaki andasudeva but was raised by Yashoda and Nanda in e village of
+        Vrindavan.</p>
+      <p> Krishna is known for his divine playfulness as a child, his charming personality, and his profound wisdom as a
+        philosopher and teacher. He performed many miraculous feats, such as lifting the Govardhan Hill on his little
+        finger, defeating powerful demons, and engaging in divine love play (lila) with his devotees, particularly with
+        the gopis (cowherd girls) of Vrindavan.</p>
+      <p> One of the most significant events associated with Krishna is the Bhagavad Gita, a sacred text within the
+        Indian epic Mahabharata. In the Bhagavad Gita, Krishna imparts spiritual wisdom and guidance to the warrior
+        prince Arjuna, who is faced with a moral dilemma on the battlefield of Kurukshetra. The teachings of Krishna in
+        the Bhagavad Gita revolve around duty, righteousness, devotion, and the path to attaining liberation or moksha.
+      </p>
+      <p> Krishna's life and teachings have had a profound influence on Hindu philosophy, spirituality, art, and
+        culture. He is worshipped by millions of devotees around the world, and his birthday, known as Krishna
+        Janmashtami, is celebrated with great enthusiasm and devotion in various parts of India. The stories and leelas
+        (divine plays) of Krishna continue to inspire people to lead virtuous lives and seek spiritual enlightenment.
+      </p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-------------- my Project ------------>
+
+  <section class="project" id="Project">
+    <h2 class="heading"> Letest <span>Project #</span></h2>
+
+    <div class="project-container">
+
+      <div class="project-box">
+        <i class='bx bxl-c-plus-plus'></i>
+        <h2>C & C++</h2>
+        <p>Web design refers to the design of websites that are displayed on the internet.</p>
+        <a href="#">Lear More</a>
+      </div>
+
+      <div class="project-box">
+        <i class='bx bx-code-alt'></i>
+        <h2>Web Design</h2>
+        <p>Web design refers to the design of websites that are displayed on the internet.</p>
+        <a href="#">Lear More</a>
+      </div>
+
+      <div class="project-box">
+        <i class='bx bxl-python'></i>
+        <h2>Python</h2>
+        <p>Web design refers to the design of websites that are displayed on the internet.</p>
+        <a href="#">Lear More</a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!----------- my Work And project ------------->
+  <section class="service" id="service">
+    <h2 class="heading"> Service Is<span> Not Avelable</span>#</h2>
+  </section>
+
+  <!-- Comtact Me Semd Massege -->
+  <section class="contact" id="Contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" name="email" id="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="Number" placeholder="Mobail Number">
+        <input type="text" placeholder="Email Subjact">
+      </div>
+      <textarea cols="30" rows="7" placeholder="Type Your Massege"></textarea>
+      <input type="submit" value="Send Massege" class="btn" onclick="Massage()">
+    </form>
+  </section>
+  <!-- Footer  -->
+  <section>
+    <footer class="footer">
+      <div class="footer-flex">
+        <div class="footer-text">
+          <p>Copyright &copy; 2023 By Codehal | All Right Reserved</p>
         </div>
+        <div class="social-media">
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+        <div class="footer-iconTop">
+          <a href="#Home"><i class='bx bxs-home-alt-2'></i></a>
+        </div>
+      </div>
+      <div>
+        <h2>Mobail : <span>+91 90542776**</span></h2>
+        <h2>Email : <span>Shailes**@gmail.com</span></h2>
+      </div>
     </footer>
-
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const body = document.body;
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            body.classList.toggle('dark-theme');
-            
-            if (body.classList.contains('light-theme')) {
-                themeIcon.textContent = '☀️';
-            } else {
-                themeIcon.textContent = '🌙';
-            }
-        });
-        
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-        
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Skill Animation on Scroll
-        const observerOptions = {
-            threshold: 0.5
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe skill items
-        document.querySelectorAll('.skill-item').forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(item);
-        });
-    </script>
+    </swiper-slide>
+    <!--------- Costom Java script File --------->
+    <script type="text/javascript" src="./script.js"></script>
+    <!---------------------aos----------------->
 </body>
+
 </html>
